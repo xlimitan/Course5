@@ -34,6 +34,7 @@ private final TelegramBot telegramBot;
             SendResponse response = telegramBot.execute(new SendMessage(task.getChatId(), text));
             if (response.isOk()) {
                 repository.delete(task);
+
             }
         }
     }
